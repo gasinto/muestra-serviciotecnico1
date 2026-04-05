@@ -16,31 +16,27 @@
     </a>
 
     <header>
-        <nav class="nav" id="nav">
+        <nav class="navbar" id="nav">
             <h2 class="nav_logo">King <span>Cell</span></h2>
-            <ul class="nav_links">
-                <li class="nav_item">
-                    <a href="#hero" class="nav_lin first">Inicio</a>
-                </li>
-                <li class="nav_item">
-                    <a href="#servicios" class="nav_lin">Servicios</a>
-                </li>
-                <li class="nav_item">
-                    <a href="#proceso" class="nav_lin">Cómo Funciona</a>
-                </li>
-                <li class="nav_item">
-                    <a href="#testimonios" class="nav_lin">Reseñas</a>
-                </li>
-                <li class="nav_item">
-                    <a href="#contacto" class="nav_lin">Contacto</a>
-                </li>
-            </ul>
-            <a href="#nav" class="nav_hamburguer">
-                <img class="nav_icon" src="./assets/menu/menu.svg" alt="menu">
-            </a>
-            <a href="#" class="nav_close">
-                <img class="nav_icon" src="./assets/menu/close.svg" alt="close menu">
-            </a>
+            
+            <input type="checkbox" id="menu-responsive">
+            <label for="menu-responsive" class="label-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <div class="contenedor-menu">
+                <ul class="menu-lista">
+                    <li class="lista-links">
+                        <a href="#hero" class="link">Inicio</a>
+                        <a href="#servicios" class="link">Servicios</a>
+                        <a href="#proceso" class="link">Cómo Funciona</a>
+                        <a href="#testimonios" class="link">Reseñas</a>
+                        <a href="#contacto" class="link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -389,7 +385,7 @@
     </footer>
 
     <script>
-        // Mostrar botón flotante solo cuando se hace scroll
+        // ============ BOTÓN FLOTANTE WHATSAPP ============
         const whatsappBtn = document.querySelector('.whatsapp-flotante');
         const hero = document.querySelector('.hero');
         
@@ -403,6 +399,7 @@
             }
         });
 
+        // ============ FORMULARIO WHATSAPP ============
         function enviarPorWhatsApp(e) {
             e.preventDefault();
             
